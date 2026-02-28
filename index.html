@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <header class="header" id="header">
+      <h1 class="logo" aria-label="Netflix">NETFLIX</h1>
+      <div class="header-actions">
+        <label class="lang-select" for="language">
+          <span>🌐</span>
+          <select id="language" aria-label="Language selector">
+            <option>English</option>
+            <option>हिन्दी</option>
+          </select>
+        </label>
+        <button class="btn btn-sign">Sign In</button>
+      </div>
+    </header>
+
+    <div class="hero-content">
+      <h2>Unlimited movies, TV shows and more</h2>
+      <p class="subtitle">Starts at ₹149. Cancel at any time.</p>
+      <p class="desc">Ready to watch? Enter your email to create or restart your membership.</p>
+
+      <form class="email-form" id="hero-email-form" novalidate>
+        <div class="input-wrap">
+          <input id="hero-email" type="email" placeholder="Email address" aria-label="Email address" required />
+          <small class="error-msg" id="hero-email-error"></small>
+        </div>
+        <button type="submit" class="btn btn-cta">Get Started &gt;</button>
+      </form>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="section-text">
+        <h3>Enjoy on your TV</h3>
+        <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+      </div>
+      <div class="media-block tv-block">
+        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="TV" />
+        <video autoplay muted loop playsinline>
+          <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="section reverse">
+      <div class="media-block mobile-block">
+        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Mobile download" />
+        <div class="download-card">
+          <div>
+            <strong>Stranger Things</strong>
+            <span>Downloading...</span>
+          </div>
+          <span class="pulse"></span>
+        </div>
+      </div>
+      <div class="section-text">
+        <h3>Download your shows to watch offline</h3>
+        <p>Save your favourites easily and always have something to watch.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-text">
+        <h3>Watch everywhere</h3>
+        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+      </div>
+      <div class="media-block device-block">
+        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" alt="Multiple devices" />
+      </div>
+    </section>
+
+    <section class="section reverse">
+      <div class="media-block kids-block">
+        <img src="https://occ-0-8407-2186.1.nflxso.net/dnm/api/v6/Gf1SK5B7hN65Wf4M40f5iQv7jQ8/AAAABUyP42f62UB3qt6x8uGJp1Wcsf8klQF3lzuW7J4syW26N7M04K9n7LzNe08z9o47fZ6vkzw4jujApv0QxT77v_j_lxKbLQY.png?r=4d7" alt="Kids profile" />
+      </div>
+      <div class="section-text">
+        <h3>Create profiles for kids</h3>
+        <p>Send children on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq-list" id="faq-list">
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span>What is Netflix?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-panel">
+          Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more.
+        </div>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span>How much does Netflix cost?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-panel">
+          Watch Netflix on your smartphone, tablet, smart TV, laptop, or streaming device for one fixed monthly fee. Plans range to suit your needs.
+        </div>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span>Where can I watch?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-panel">
+          Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web or on devices connected to the internet.
+        </div>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span>How do I cancel?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-panel">
+          Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks.
+        </div>
+      </div>
+
+      <p class="desc center">Ready to watch? Enter your email to create or restart your membership.</p>
+      <form class="email-form center-form" id="faq-email-form" novalidate>
+        <div class="input-wrap">
+          <input id="faq-email" type="email" placeholder="Email address" aria-label="Email address" required />
+          <small class="error-msg" id="faq-email-error"></small>
+        </div>
+        <button type="submit" class="btn btn-cta">Get Started &gt;</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Questions? Call <a href="#">000-800-919-1743</a></p>
+    <div class="footer-grid">
+      <a href="#">FAQ</a>
+      <a href="#">Help Centre</a>
+      <a href="#">Account</a>
+      <a href="#">Media Centre</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Ways to Watch</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Corporate Information</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <p class="country">Netflix India</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

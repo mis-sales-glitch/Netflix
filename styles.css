@@ -1,0 +1,371 @@
+:root {
+  --red: #e50914;
+  --black: #000;
+  --panel: #2d2d2d;
+  --text: #fff;
+  --muted: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Martel Sans", Arial, sans-serif;
+  background: var(--black);
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  border-bottom: 8px solid #232323;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/9cb5f2f1-87cd-4f62-8ef1-f77ad2c8c0e0/web/IN-en-20260222-TRIFECTA-perspective_019ca6a5-f5bf-437f-b723-7f68f19feccb_medium.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.85) 70%), linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.header,
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.25s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+  color: var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.lang-select {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.lang-select select {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.lang-select option {
+  color: #000;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-sign {
+  background: var(--red);
+  padding: 0.45rem 1rem;
+}
+
+.hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+  min-height: calc(92vh - 92px);
+  padding: 3rem 1rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.8vw, 1.5rem);
+  margin-top: 0.85rem;
+}
+
+.desc {
+  font-size: 1.1rem;
+  margin-top: 1.3rem;
+}
+
+.email-form {
+  margin-top: 1.15rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.input-wrap {
+  width: min(100%, 380px);
+  text-align: left;
+}
+
+.email-form input {
+  width: 100%;
+  min-height: 56px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(22, 22, 22, 0.72);
+  color: #fff;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.error-msg {
+  color: #ffa00a;
+  display: block;
+  font-size: 0.8rem;
+  min-height: 1rem;
+  margin-top: 0.25rem;
+}
+
+.btn-cta {
+  background: var(--red);
+  min-height: 56px;
+  padding: 0 1.65rem;
+  font-size: 1.45rem;
+}
+
+.section {
+  border-bottom: 8px solid #232323;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 1.2rem;
+  padding: 4.5rem 2rem;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse > * {
+  direction: ltr;
+}
+
+.section-text h3,
+.faq h3 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.section-text p {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.4vw, 1.45rem);
+}
+
+.media-block {
+  position: relative;
+}
+
+.media-block img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.tv-block video {
+  position: absolute;
+  left: 13%;
+  top: 20%;
+  width: 73%;
+  z-index: 1;
+}
+
+.download-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+  width: min(80%, 360px);
+  background: #000;
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.download-card span {
+  color: #0071eb;
+  font-size: 0.85rem;
+}
+
+.pulse {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 1; }
+  70% { transform: scale(1.15); opacity: 0.55; }
+  100% { transform: scale(0.9); opacity: 1; }
+}
+
+.faq {
+  border-bottom: 8px solid #232323;
+  padding: 4.5rem 1rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.faq h3 {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.faq-item {
+  width: 100%;
+  border: none;
+  background: var(--panel);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35rem 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-item:hover {
+  background: #414141;
+}
+
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--panel);
+  font-size: clamp(0.95rem, 1.8vw, 1.4rem);
+  line-height: 1.45;
+  transition: max-height 0.25s ease, padding 0.25s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-panel.open {
+  max-height: 200px;
+  padding: 1rem 1.5rem 1.3rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-form {
+  margin-top: 1rem;
+}
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--muted);
+  padding: 4rem 2rem;
+  font-size: 0.92rem;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer-grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.country {
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 960px) {
+  .section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .btn-cta {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .lang-select {
+    padding: 0.25rem 0.35rem;
+  }
+
+  .lang-select select {
+    max-width: 82px;
+  }
+
+  .faq-item {
+    padding: 1rem;
+  }
+}
